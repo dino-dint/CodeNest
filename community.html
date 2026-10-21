@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Community — CodeNest</title>
+    <!-- Bootstrap CSS -->
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="assets/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <!-- CodeNest Shared Stylesheet -->
+    <link rel="stylesheet" href="assets/dist/css/style.css" />
+    <!-- Community Page Scoped Stylesheet -->
+    <link rel="stylesheet" href="assets/dist/css/community.css" />
+  </head>
+  <body class="community-page-body">
+    <!-- Navbar (CodeNest Standard) -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-black shadow sticky-top codenest-navbar"
+    >
+      <div class="container-fluid px-3 px-lg-5">
+        <a
+          href="index.html"
+          class="navbar-brand d-flex align-items-center gap-2 codenest-brand-link"
+        >
+          <div class="codenest-brand">
+            <i class="bi bi-braces fs-3 text-white"></i>
+          </div>
+          <span class="fs-4 fw-bold codenest-span"> CodeNest </span>
+        </a>
+        <button
+          class="navbar-toggler border-secondary"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#codenestNavbar"
+          aria-controls="codenestNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="codenestNavbar">
+          <ul class="navbar-nav mx-auto my-3 my-lg-0 gap-lg-4 text-center">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link text-white-50"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a href="courses.html" class="nav-link text-white-50">
+                Courses
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="path.html" class="nav-link text-white-50">
+                Learning path
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="challenge.html" class="nav-link text-white-50">
+                Challenges
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="community.html" class="nav-link active text-white">
+                Community
+              </a>
+            </li>
+          </ul>
+          <div
+            class="d-flex flex-column flex-lg-row align-items-center gap-3 pb-3 pb-lg-0"
+          >
+            <a
+              href="#"
+              class="text-white fw-bold fs-6 text-decoration-none codenest-sign"
+            >
+              Sign in
+            </a>
+            <a
+              href="courses.html"
+              class="btn btn-primary rounded-0 codenest-button"
+            >
+              Start Learning
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Community Hero Section -->
+    <header class="container-fluid bg-black text-white codenest-hero">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-12 col-lg-7">
+            <div class="hero-left-side d-flex flex-column gap-3">
+              <span class="community-hero-tag">//DEVELOPER COMMUNITY</span>
+              <div class="codenest-hero-title">
+                <h1 class="codenest-hero-h1-left fw-bold text-white">
+                  Ask freely.
+                </h1>
+                <h1 class="codenest-hero-h1-left fw-bold text-info">
+                  Build together.
+                </h1>
+              </div>
+              <p
+                class="fs-5 mt-2 fw-semibold text-white-50 codenest-hero-description"
+              >
+                A collaborative space for passionate programmers. Share your
+                projects, debug architectural bottlenecks, discuss career
+                growth, and never code alone.
+              </p>
+              <!-- Metrics Badges -->
+              <div class="d-flex flex-wrap gap-3 mt-2">
+                <div class="community-stat-badge">
+                  <div class="fw-bold fs-5 text-white">18.4k</div>
+                  <small class="text-white-50 font-monospace">Active Members</small>
+                </div>
+                <div class="community-stat-badge">
+                  <div class="fw-bold fs-5 text-info">5,200+</div>
+                  <small class="text-white-50 font-monospace">Solved Questions</small>
+                </div>
+                <div class="community-stat-badge">
+                  <div class="fw-bold fs-5 text-success">~45 min</div>
+                  <small class="text-white-50 font-monospace">Avg Response Time</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Hero Right Status Pulse -->
+          <div class="col-12 col-lg-5">
+            <div class="hero-right-side py-lg-4">
+              <div
+                class="hero-right-container text-start font-monospace border border-2 border-secondary-subtle rounded-3 p-4 p-md-5 bg-dark shadow-lg w-100"
+              >
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-white-50 fs-6 fw-normal">COMMUNITY_PULSE</span>
+                  <span class="badge bg-success-subtle text-success border border-success-subtle">LIVE HUB</span>
+                </div>
+                <h2 class="fw-bolder text-white mt-1 mb-2">
+                  1,480
+                  <span class="text-info">builders online</span>
+                </h2>
+                <p class="text-secondary small mb-3">
+                  24 new discussions posted today across frontend architectures, database design, and systems engineering.
+                </p>
+                <div class="d-flex align-items-center gap-2 pt-2 border-top border-secondary">
+                  <span
+                    class="bg-success rounded-circle d-inline-block flex-shrink-0"
+                    style="width: 8px; height: 8px"
+                  ></span>
+                  <small class="text-secondary">Next live code review in 2 days</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Community Feed Layout -->
+    <main class="container py-5" id="communityFeedAnchor">
+      <div class="row g-4">
+        <!-- Main Column: Discussions Feed & Header -->
+        <div class="col-12 col-lg-8">
+          <!-- Community Header & New Post Button -->
+          <div class="community-header-bar">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-4">
+              <div>
+                <h2 class="text-white fw-bold fs-3 mb-1">Trending Discussions</h2>
+                <p class="text-secondary small mb-0">
+                  Share knowledge, review open-source code, and solve challenges together.
+                </p>
+              </div>
+              <button
+                type="button"
+                class="btn-new-post"
+                data-bs-toggle="modal"
+                data-bs-target="#newPostModal"
+              >
+                <i class="bi bi-plus-lg fs-6"></i> New Post
+              </button>
+            </div>
+
+            <!-- Search and Filter Bar -->
+            <div class="row g-3 align-items-center pt-3 border-top border-secondary-subtle">
+              <div class="col-12 col-md-7">
+                <div class="input-group">
+                  <span class="input-group-text bg-black border-secondary text-secondary">
+                    <i class="bi bi-search"></i>
+                  </span>
+                  <input
+                    type="text"
+                    id="communitySearchInput"
+                    class="form-control community-search-input"
+                    placeholder="Search discussions by topic, tag, or author..."
+                    aria-label="Search discussions"
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-md-5 text-md-end">
+                <span id="communityCountBadge" class="text-secondary small font-monospace">8 discussions</span>
+              </div>
+            </div>
+
+            <!-- Category Filter Pills -->
+            <div class="d-flex flex-wrap gap-2 align-items-center mt-3 pt-3 border-top border-secondary-subtle">
+              <span class="text-secondary small font-monospace me-1">CATEGORY:</span>
+              <a href="#" class="community-category-pill active" data-category="ALL">All</a>
+              <a href="#" class="community-category-pill" data-category="SHOWCASE">Showcase</a>
+              <a href="#" class="community-category-pill" data-category="HELP">Help</a>
+              <a href="#" class="community-category-pill" data-category="CAREER">Career</a>
+              <a href="#" class="community-category-pill" data-category="FRONTEND">Frontend</a>
+              <a href="#" class="community-category-pill" data-category="BACKEND">Backend</a>
+              <a href="#" class="community-category-pill" data-category="DATABASE">Database</a>
+              <a href="#" class="community-category-pill" data-category="DEVOPS">DevOps</a>
+            </div>
+          </div>
+
+          <!-- Discussions Feed Container -->
+          <div id="discussionsFeed">
+            <!-- Rendered dynamically by assets/dist/js/community.js -->
+          </div>
+        </div>
+
+        <!-- Sidebar Column (Upcoming Event & Community Principles) -->
+        <div class="col-12 col-lg-4">
+          <!-- Upcoming Event Card (Reference Image 2) -->
+          <div class="event-sidebar-card">
+            <div class="event-label-cyan">// UPCOMING_EVENT</div>
+            <h3 class="event-title">Live Architecture Review & Systems Teardown</h3>
+            <p class="event-description">
+              Join senior engineers as they dissect high-throughput production services, evaluate concurrency trade-offs, and conduct live code reviews on member projects.
+            </p>
+            <div class="event-meta-box">
+              <div class="event-meta-item">
+                <i class="bi bi-calendar3 text-info"></i>
+                <span>Thursday, Oct 24, 2026</span>
+              </div>
+              <div class="event-meta-item">
+                <i class="bi bi-clock text-info"></i>
+                <span>18:00 UTC (1 hour duration)</span>
+              </div>
+              <div class="event-meta-item">
+                <i class="bi bi-person-video3 text-info"></i>
+                <span>Interactive Live Stream</span>
+              </div>
+              <div class="event-meta-item text-secondary-emphasis">
+                <i class="bi bi-person-check text-info"></i>
+                <span>Hosted by Alex Chen (Staff Architect)</span>
+              </div>
+            </div>
+            <button class="btn-reserve-seat" id="btnReserveSeat">
+              <i class="bi bi-ticket-perforated me-1"></i> Reserve a Seat
+            </button>
+            <div id="eventReserveStatus" class="d-none"></div>
+          </div>
+
+          <!-- Community Principles Card (Reference Image 2) -->
+          <div class="community-sidebar-card">
+            <div class="principles-label-green">// COMMUNITY_PRINCIPLES</div>
+            <p class="text-secondary small mb-3">
+              We hold ourselves to high technical standards and supportive peer mentorship.
+            </p>
+            <div class="principles-list">
+              <!-- Principle 1 -->
+              <div class="principle-item">
+                <span class="principle-number">1</span>
+                <p class="principle-text">
+                  <strong>Be specific and respectful.</strong> Share error messages, stack traces, and minimal reproducible code examples.
+                </p>
+              </div>
+              <!-- Principle 2 -->
+              <div class="principle-item">
+                <span class="principle-number">2</span>
+                <p class="principle-text">
+                  <strong>Share your work and explain what you learned.</strong> Celebrate failures and breakthroughs so others can learn from your path.
+                </p>
+              </div>
+              <!-- Principle 3 -->
+              <div class="principle-item">
+                <span class="principle-number">3</span>
+                <p class="principle-text">
+                  <strong>Help others understand, not just copy answers.</strong> Explain the "why" behind the code rather than dropping uncontextualized snippets.
+                </p>
+              </div>
+              <!-- Principle 4 -->
+              <div class="principle-item">
+                <span class="principle-number">4</span>
+                <p class="principle-text">
+                  <strong>Give constructive feedback.</strong> Critique ideas and implementations constructively with kindness and actionable steps.
+                </p>
+              </div>
+              <!-- Principle 5 -->
+              <div class="principle-item">
+                <span class="principle-number">5</span>
+                <p class="principle-text">
+                  <strong>Keep discussions relevant and welcoming.</strong> Foster an inclusive environment where beginners and seniors grow together.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Popular Tech Tags Card -->
+          <div class="community-sidebar-card">
+            <h6 class="text-white fw-bold mb-3 d-flex align-items-center gap-2">
+              <i class="bi bi-tags-fill text-info"></i> Popular Topics
+            </h6>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#" class="tag-chip sidebar-tag-pill" data-tag="javascript">#javascript</a>
+              <a href="#" class="tag-chip sidebar-tag-pill" data-tag="react">#react</a>
+              <a href="#" class="tag-chip sidebar-tag-pill" data-tag="rust">#rust</a>
+              <a href="#" class="tag-chip sidebar-tag-pill" data-tag="backend">#backend</a>
+              <a href="#" class="tag-chip sidebar-tag-pill" data-tag="docker">#docker</a>
+              <a href="#" class="tag-chip sidebar-tag-pill" data-tag="sql">#sql</a>
+              <a href="#" class="tag-chip sidebar-tag-pill" data-tag="career">#career</a>
+              <a href="#" class="tag-chip sidebar-tag-pill" data-tag="systems">#systems</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal: New Post / Discussion -->
+    <div
+      class="modal fade"
+      id="newPostModal"
+      tabindex="-1"
+      aria-labelledby="newPostModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content modal-content-community">
+          <div class="modal-header modal-header-community">
+            <div>
+              <h5 class="modal-title text-white fw-bold" id="newPostModalLabel">
+                Start a New Discussion
+              </h5>
+              <small class="text-secondary font-monospace">Share questions, project showcases, or engineering insights</small>
+            </div>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form id="newPostForm">
+            <div class="modal-body p-4">
+              <div id="postFormFeedback" class="d-none"></div>
+
+              <!-- Post Title -->
+              <div class="mb-3">
+                <label for="postTitle" class="community-form-label">
+                  Discussion Title <span class="text-danger">*</span>
+                </label>
+                <input
+                  type="text"
+                  class="form-control community-form-control"
+                  id="postTitle"
+                  placeholder="e.g. How I reduced SQLite database queries by 60%"
+                  required
+                />
+              </div>
+
+              <!-- Category & Tags in a 2-col row -->
+              <div class="row g-3 mb-3">
+                <div class="col-12 col-md-6">
+                  <label for="postCategory" class="community-form-label">
+                    Category <span class="text-danger">*</span>
+                  </label>
+                  <select
+                    class="form-select community-form-control"
+                    id="postCategory"
+                    required
+                  >
+                    <option value="Showcase">Showcase — Share your project</option>
+                    <option value="Help">Help — Ask for debugging support</option>
+                    <option value="Career">Career — Advice & roadmaps</option>
+                    <option value="Frontend">Frontend — UI, CSS, Frameworks</option>
+                    <option value="Backend">Backend — APIs, Services, Auth</option>
+                    <option value="Database">Database — SQL, NoSQL, Tuning</option>
+                    <option value="DevOps">DevOps — Docker, CI/CD, Cloud</option>
+                    <option value="Discussion">Discussion — General tech talk</option>
+                  </select>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="postTags" class="community-form-label">
+                    Tags (comma separated)
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control community-form-control"
+                    id="postTags"
+                    placeholder="e.g. react, performance, vite"
+                  />
+                </div>
+              </div>
+
+              <!-- Post Content -->
+              <div class="mb-2">
+                <label for="postContent" class="community-form-label">
+                  Post Content <span class="text-danger">*</span>
+                </label>
+                <textarea
+                  class="form-control community-form-control"
+                  id="postContent"
+                  rows="6"
+                  placeholder="Describe your question, project architecture, or findings. Markdown code blocks and technical details are encouraged!"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <div class="modal-footer modal-footer-community d-flex justify-content-between">
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-sm"
+                data-bs-dismiss="modal"
+              >
+                Cancel
+              </button>
+              <button type="submit" class="btn btn-new-post btn-sm">
+                <i class="bi bi-send-fill me-1"></i> Publish Discussion
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Discussion Detail & Replies View -->
+    <div
+      class="modal fade"
+      id="discussionDetailModal"
+      tabindex="-1"
+      aria-labelledby="discussionDetailModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content modal-content-community">
+          <div class="modal-header modal-header-community">
+            <div class="d-flex align-items-center gap-2">
+              <span id="detailCategory" class="badge-disc-category showcase">SHOWCASE</span>
+              <span id="detailTime" class="text-secondary small font-monospace">2 hours ago</span>
+            </div>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <h4 class="text-white fw-bold mb-3" id="detailTitle">Discussion Title</h4>
+
+            <div class="d-flex align-items-center gap-2 mb-3 pb-3 border-bottom border-secondary-subtle">
+              <span class="author-avatar" id="detailAvatar">ER</span>
+              <div>
+                <div class="text-white small fw-bold" id="detailAuthor">Author Name</div>
+                <small class="text-secondary">Community Member</small>
+              </div>
+            </div>
+
+            <p class="text-secondary mb-4" id="detailContent" style="white-space: pre-line; line-height: 1.7;">
+              Detailed post content...
+            </p>
+
+            <div class="d-flex flex-wrap gap-2 mb-4" id="detailTags">
+              <!-- tags -->
+            </div>
+
+            <!-- Replies Section -->
+            <div class="pt-3 border-top border-secondary-subtle">
+              <h5 class="text-white fw-bold mb-3" id="detailRepliesCount">Replies</h5>
+              <div id="detailRepliesList" class="mb-4">
+                <!-- replies injected dynamically -->
+              </div>
+
+              <!-- Quick Reply Box -->
+              <div class="mt-3">
+                <label for="replyContentInput" class="community-form-label">
+                  Leave a Reply
+                </label>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control community-form-control"
+                    id="replyContentInput"
+                    placeholder="Write a helpful response or constructive feedback..."
+                  />
+                  <button class="btn btn-outline-info" type="button" id="btnSubmitReply">
+                    Reply
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer modal-footer-community">
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-sm"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Community Call to Action Section (Identical to CodeNest Theme) -->
+    <section class="container-fluid grid-background" id="community-challenge-cta">
+      <div class="container p-4 p-md-5 text-center">
+        <div class="py-5">
+          <p class="fw-bold text-secondary mb-3">READY TO PUT CODE TO THE TEST?</p>
+          <h2 class="fw-bolder codenest-cta-h1 text-white mt-3">
+            Solve real-world coding problems.
+            <span class="d-lg-block">Earn XP & climb the leaderboard.</span>
+          </h2>
+          <p class="text-secondary fw-semibold codenest-cta-description mt-4">
+            Sharpen your algorithms, frontend architecture, and systems skills with our bite-sized interactive challenges.
+          </p>
+          <a
+            href="challenge.html"
+            class="btn codenest-cta-btn mt-4 d-inline-flex align-items-center justify-content-center"
+          >
+            Explore Challenges
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (Identical to CodeNest Standard) -->
+    <footer class="container-fluid py-4 border-top border-dark codenest-footer">
+      <div class="container-xxl">
+        <div class="row align-items-center text-center text-lg-start gy-4">
+          <div class="col-12 col-lg-4">
+            <a
+              href="index.html"
+              class="navbar-brand d-inline-flex align-items-center gap-2"
+            >
+              <div class="codenest-brand">
+                <i class="bi bi-braces fs-3 text-white"></i>
+              </div>
+              <span class="text-secondary fs-5"> CodeNest </span>
+            </a>
+          </div>
+          <div class="col-12 col-lg-4 mb-3 mb-lg-0 text-lg-center">
+            <span class="text-secondary small">Learn deeply. Build boldly.</span>
+          </div>
+          <div class="col-12 col-lg-4 text-lg-end">
+            <span class="text-secondary small">
+              &copy; 2026 CodeNest Learning Co.
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS (includes Popper) -->
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Community Page Script -->
+    <script src="assets/dist/js/community.js"></script>
+  </body>
+</html>

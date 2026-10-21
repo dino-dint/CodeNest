@@ -1,0 +1,561 @@
+/* ============================================================
+   CodeNest - Community Page Styles (community.css)
+   Scoped styling for community.html
+   ============================================================ */
+
+/* Page Background */
+.community-page-body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  min-height: 100vh;
+}
+
+/* Community Hero Tag & Accents */
+.community-hero-tag {
+  color: #38bdf8;
+  font-family: "DM Mono", monospace;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.community-stat-badge {
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 12px 20px;
+}
+
+/* Toolbar & New Post Header */
+.community-header-bar {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.btn-new-post {
+  background-color: #ccff00;
+  color: #0d1117;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-new-post:hover {
+  background-color: #b8e600;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(204, 255, 0, 0.35);
+}
+
+/* Category Filter Tabs */
+.community-category-pill {
+  background: #21262d;
+  color: #8b949e;
+  border: 1px solid #30363d;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.825rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.community-category-pill:hover {
+  color: #f0f6fc;
+  border-color: #38bdf8;
+  background: #282e38;
+}
+
+.community-category-pill.active {
+  background: #38bdf8;
+  color: #0d1117;
+  border-color: #38bdf8;
+  font-weight: 700;
+}
+
+/* Community Search Input */
+.community-search-input {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  color: #f0f6fc;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.community-search-input:focus {
+  background-color: #0d1117;
+  border-color: #38bdf8;
+  color: #f0f6fc;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.community-search-input::placeholder {
+  color: #6e7681;
+}
+
+/* Discussion Feed Card */
+.discussion-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 22px 26px;
+  margin-bottom: 16px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.discussion-card:hover {
+  transform: translateY(-3px);
+  border-color: #58a6ff;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), 0 0 15px rgba(56, 189, 248, 0.08);
+}
+
+.discussion-card.is-new-post {
+  border-color: rgba(204, 255, 0, 0.5);
+  animation: highlightNewPost 1.2s ease-out;
+}
+
+@keyframes highlightNewPost {
+  from {
+    background-color: rgba(204, 255, 0, 0.12);
+  }
+  to {
+    background-color: #161b22;
+  }
+}
+
+/* Category Badges */
+.badge-disc-category {
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.badge-disc-category.showcase {
+  background: rgba(204, 255, 0, 0.15);
+  color: #ccff00;
+  border: 1px solid rgba(204, 255, 0, 0.35);
+}
+
+.badge-disc-category.help {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+}
+
+.badge-disc-category.career {
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+.badge-disc-category.frontend {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.badge-disc-category.backend {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.badge-disc-category.database {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.badge-disc-category.devops {
+  background: rgba(236, 72, 153, 0.15);
+  color: #f472b6;
+  border: 1px solid rgba(236, 72, 153, 0.35);
+}
+
+.badge-disc-category.discussion {
+  background: rgba(148, 163, 184, 0.15);
+  color: #cbd5e1;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+/* Discussion Title & Content */
+.discussion-title {
+  color: #f0f6fc;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  transition: color 0.2s ease;
+}
+
+.discussion-card:hover .discussion-title {
+  color: #38bdf8;
+}
+
+.discussion-snippet {
+  color: #8b949e;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+/* Author Avatar & Meta */
+.author-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #21262d;
+  color: #f0f6fc;
+  border: 1px solid #30363d;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.discussion-meta-text {
+  color: #8b949e;
+  font-size: 0.85rem;
+}
+
+.discussion-meta-dot {
+  margin: 0 6px;
+  color: #484f58;
+}
+
+/* Technology Tag Chips */
+.tag-chip {
+  color: #8b949e;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-family: "DM Mono", monospace;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.tag-chip:hover {
+  color: #38bdf8;
+  border-color: #38bdf8;
+}
+
+/* Interaction Controls */
+.action-btn-metric {
+  background: transparent;
+  border: 1px solid #30363d;
+  color: #8b949e;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.action-btn-metric:hover {
+  color: #f0f6fc;
+  border-color: #58a6ff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.action-btn-metric.liked {
+  color: #ff705c;
+  border-color: #ff705c;
+  background: rgba(255, 112, 92, 0.1);
+}
+
+/* ============================================================
+   SIDEBAR COMPONENTS
+   ============================================================ */
+
+.community-sidebar-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Upcoming Event Card (Reference Image 2) */
+.event-sidebar-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.event-sidebar-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #38bdf8, #ccff00);
+}
+
+.event-label-cyan {
+  color: #38bdf8;
+  font-family: "DM Mono", monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.event-title {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.event-description {
+  color: #8b949e;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.event-meta-box {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+}
+
+.event-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #c9d1d9;
+  font-size: 0.85rem;
+  font-family: "DM Mono", monospace;
+  margin-bottom: 4px;
+}
+
+.event-meta-item:last-child {
+  margin-bottom: 0;
+}
+
+.btn-reserve-seat {
+  background-color: #38bdf8;
+  color: #030712;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.btn-reserve-seat:hover {
+  background-color: #7dd3fc;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.btn-reserve-seat.reserved {
+  background-color: #238636;
+  color: #ffffff;
+}
+
+/* Community Principles Card (Reference Image 2) */
+.principles-label-green {
+  color: #ccff00;
+  font-family: "DM Mono", monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 14px;
+}
+
+.principle-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #21262d;
+}
+
+.principle-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.principle-number {
+  font-family: "DM Mono", monospace;
+  color: #38bdf8;
+  font-weight: 700;
+  font-size: 0.9rem;
+  background: rgba(56, 189, 248, 0.1);
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.principle-text {
+  color: #c9d1d9;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.principle-text strong {
+  color: #f0f6fc;
+}
+
+/* Modals */
+.modal-content-community {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  border-radius: 12px;
+}
+
+.modal-header-community {
+  border-bottom: 1px solid #30363d;
+  padding: 20px 24px;
+}
+
+.modal-footer-community {
+  border-top: 1px solid #30363d;
+  padding: 16px 24px;
+}
+
+.community-form-label {
+  color: #f0f6fc;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.community-form-control {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  color: #f0f6fc;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+}
+
+.community-form-control:focus {
+  background-color: #0d1117;
+  border-color: #38bdf8;
+  color: #f0f6fc;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.community-form-control::placeholder {
+  color: #6e7681;
+}
+
+/* Reply thread inside discussion modal */
+.reply-item {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+
+/* Empty State */
+.empty-discussions {
+  background: #161b22;
+  border: 1px dashed #30363d;
+  border-radius: 12px;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeInCommunity 0.3s ease-in-out;
+}
+
+@keyframes fadeInCommunity {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  .community-header-bar {
+    padding: 18px;
+  }
+
+  .discussion-card {
+    padding: 16px;
+  }
+
+  .discussion-title {
+    font-size: 1.05rem;
+  }
+
+  .btn-new-post {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .community-sidebar-card,
+  .event-sidebar-card {
+    padding: 18px;
+  }
+
+  .event-title {
+    font-size: 1.15rem;
+  }
+
+  .principle-item {
+    gap: 8px;
+  }
+
+  .principle-text {
+    font-size: 0.825rem;
+  }
+}
+

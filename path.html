@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="assets/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/dist/css/style.css" />
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- Main Navigation Bar: Sticky header featuring CodeNest brand logo, primary navigation links, and action buttons -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-black shadow sticky-top codenest-navbar"
+    >
+      <div class="container-fluid px-3 px-lg-5">
+        <a
+          href="#"
+          class="navbar-brand d-flex align-items-center gap-2 codenest-brand-link"
+        >
+          <div class="codenest-brand">
+            <i class="bi bi-braces fs-3 text-white"></i>
+          </div>
+
+          <span class="fs-4 fw-bold codenest-span"> CodeNest </span>
+        </a>
+        <button
+          class="navbar-toggler border-secondary"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#codenestNavbar"
+          aria-controls="codenestNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible navigation links and user account / start learning CTA -->
+        <div class="collapse navbar-collapse" id="codenestNavbar">
+          <ul class="navbar-nav mx-auto my-3 my-lg-0 gap-lg-4 text-center">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active text-white"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a href="courses.html" class="nav-link text-white-50">
+                Courses
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="path.html" class="nav-link text-white-50">
+                Learning path
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="challenge.html" class="nav-link text-white-50">
+                Challenges
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="community.html" class="nav-link text-white-50">
+                Community
+              </a>
+            </li>
+          </ul>
+          <div
+            class="d-flex flex-column flex-lg-row align-items-center gap-3 pb-3 pb-lg-0"
+          >
+            <a
+              href="#"
+              class="text-white fw-bold fs-6 text-decoration-none codenest-sign"
+            >
+              Sign in
+            </a>
+
+            <a
+              href="#courses"
+              class="btn btn-primary rounded-0 codenest-button"
+            >
+              Start Learning
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Courses Nav -->
+    <!-- Hero Section: Learning paths header presenting career-focused curriculum sequencing -->
+    <section class="container-fluid bg-black text-white codenest-hero">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-12 col-lg-6">
+            <div class="hero-left-side d-flex flex-column gap-4">
+              <span class="codenest-span fs-6 text-info">//LEARNING PATHS</span>
+              <div class="codenest-hero-title">
+                <h1 class="codenest-hero-h1-left fw-bold text-white">
+                  One goal.
+                </h1>
+                <h1 class="codenest-hero-h1-left fw-bold text-info">
+                  A clear route.
+                </h1>
+              </div>
+              <p
+                class="fs-5 mt-2 fw-semibold text-white-50 codenest-hero-description"
+              >
+                Career-focused curricula that sequence the right concepts,
+                projects, and reviews—so you always know what to learn next.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Hero  -->
+    <!-- Learning Paths Catalog: Roadmap section presenting structured skill-building tracks -->
+    <div style="background-color: whitesmoke;">
+      <div class="container mt-5">
+        <div class="mb-5">
+          <small class="fs-6 fw-semibold text-black"> YOUR ROAD PATH </small>
+
+          <div class="row align-items-end g-4 mt-2">
+            <div class="col-12 col-lg-6">
+              <h2 class="fw-bold codenest-feature-h1 mb-0">
+                Pick your prefer skills.
+              </h2>
+            </div>
+            <div class="col-12 col-lg-6">
+              <p class="fw-normal fs-5 mb-0">
+                A focused curriculum that takes you from your first tag to A professional IT, one practical milestone at a time.
+              </p>
+            </div>
+          </div>
+        <div class="learning-section">
+          <!-- Dynamic Learning Paths Grid: Container dynamically rendered via client-side JavaScript -->
+          <div class="row g-4" id="learningPathsContainer"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mentorship & Support Section: Demonstrates interactive code reviews and guidance for learners -->
+    <section class="support-section">
+    <div class="container-fluid support-container">
+      <div class="row align-items-center g-5">
+
+        <!-- Left Content -->
+        <div class="col-12 col-lg-7">
+          <div class="support-content">
+
+            <p class="support-label">
+              BUILT-IN SUPPORT
+            </p>
+
+            <h1 class="support-title">
+              Stuck is a moment, not a destination.
+            </h1>
+
+            <p class="support-description">
+              Get code reviews, practical hints, and help from mentors
+              who remember exactly what learning felt like.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- Right Code Review Card -->
+        <div class="col-12 col-lg-5">
+          <div class="review-card">
+
+            <!-- Card Header -->
+            <div class="review-header">
+              <span class="review-id">
+                REVIEW #1284
+              </span>
+
+              <span class="review-status">
+                RESOLVED
+              </span>
+            </div>
+
+            <!-- Code Block -->
+            <div class="review-code">
+              <pre><code><span class="code-selector">.card</span> {
+  display: grid;
+  gap: 1rem;
+}</code></pre>
+            </div>
+
+            <!-- Review Feedback -->
+            <div class="review-feedback">
+              <p>
+                <strong>Nice fix.</strong>
+                This now adapts cleanly at every breakpoint.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+    <!-- Site Footer: Global footer with brand identity, mission tagline, and copyright notice -->
+    <footer class="container-fluid py-4 border-top border-dark codenest-footer">
+      <div class="container-xxl">
+        <div class="row align-items-center text-center text-lg-start gy-4">
+          <div class="col-12 col-lg-4">
+            <a
+              href="#"
+              class="navbar-brand d-inline-flex align-items-center gap-2"
+            >
+              <div class="codenest-brand">
+                <i class="bi bi-braces fs-3 text-white"></i>
+              </div>
+
+              <span class="text-secondary fs-5"> CodeNest </span>
+            </a>
+          </div>
+          <div class="col-12 col-lg-4 mb-3 mb-lg-0 text-lg-center">
+            <span class="text-secondary small"
+              >Learn deeply. Build boldly.</span
+            >
+          </div>
+          <div class="col-12 col-lg-4 text-lg-end">
+            <span class="text-secondary small">
+              &copy; 2026 CodeNest Learning Co.
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap Bundle JavaScript: Core scripts for responsive navigation toggling -->
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Client-side Application Script: Learning paths dataset definition, dynamic DOM rendering, and user selection handlers -->
+    <script>
+      const learningPaths = [
+        {
+          id: 1,
+          title: "Full Stack Developer",
+          duration: "24 weeks",
+          courseCount: 8,
+          courses: ["HTML & CSS", "TypeScript", "React", "Node.js"],
+          certificate: "Portfolio certificate included",
+        },
+        {
+          id: 2,
+          title: "Frontend Developer",
+          duration: "16 weeks",
+          courseCount: 6,
+          courses: ["HTML & CSS", "JavaScript", "Bootstrap", "React"],
+          certificate: "Portfolio certificate included",
+        },
+        {
+          id: 3,
+          title: "Backend Developer",
+          duration: "20 weeks",
+          courseCount: 7,
+          courses: ["Node.js", "Express.js", "REST APIs", "PostgreSQL"],
+          certificate: "Backend project included",
+        },
+        {
+          id: 4,
+          title: "UI/UX Designer",
+          duration: "12 weeks",
+          courseCount: 5,
+          courses: [
+            "Design Principles",
+            "Color Theory",
+            "Figma",
+            "Prototyping",
+          ],
+          certificate: "Design portfolio included",
+        },
+        {
+          id: 5,
+          title: "Data Analyst",
+          duration: "18 weeks",
+          courseCount: 6,
+          courses: ["Excel", "SQL", "Python", "Power BI"],
+          certificate: "Data project included",
+        },
+        {
+          id: 6,
+          title: "Python Developer",
+          duration: "16 weeks",
+          courseCount: 6,
+          courses: ["Python Basics", "OOP", "File Handling", "Django"],
+          certificate: "Python project included",
+        },
+        {
+          id: 7,
+          title: "Mobile App Developer",
+          duration: "20 weeks",
+          courseCount: 7,
+          courses: [
+            "JavaScript",
+            "React Native",
+            "Navigation",
+            "API Integration",
+          ],
+          certificate: "Mobile app project included",
+        },
+        {
+          id: 8,
+          title: "AI & Machine Learning",
+          duration: "24 weeks",
+          courseCount: 8,
+          courses: [
+            "Python",
+            "NumPy & Pandas",
+            "Machine Learning",
+            "Neural Networks",
+          ],
+          certificate: "AI project included",
+        },
+        {
+          id: 9,
+          title: "Cybersecurity Specialist",
+          duration: "20 weeks",
+          courseCount: 7,
+          courses: ["Networking", "Linux", "Ethical Hacking", "Web Security"],
+          certificate: "Security lab included",
+        },
+        {
+          id: 10,
+          title: "Cloud & DevOps Engineer",
+          duration: "22 weeks",
+          courseCount: 8,
+          courses: ["Linux", "Git & GitHub", "Docker", "AWS & CI/CD"],
+          certificate: "Deployment project included",
+        },
+      ];
+
+      const container = document.getElementById('learningPathsContainer');
+      container.innerHTML = learningPaths.map((path) => `
+        <div class="col-12 col-lg-6">
+            <div class="learning-card codenest-feature-card h-100">
+                <div class="d-flex justify-content-between align-items-center gap-3">
+                    <div class="path-icon">
+                        <span>⬡</span>
+                    </div>
+                    <div class="path-meta">
+                        ${path.duration} · ${path.courseCount} courses
+                    </div>
+                </div>
+
+                <h2 class="path-title">${path.title}</h2>
+
+                <div class="row g-2 course-list">
+                    ${path.courses.map((course, index) => `
+                        <div class="col-12 col-sm-6">
+                            <div class="course-item">
+                                <span class="course-number">
+                                   ${String(index + 1).padStart(2, "0")} 
+                                </span>
+                                <span>${course}</span>
+                            </div>
+                        </div>
+                    `).join("")}
+                </div>
+
+                <div class="path-footer">
+                    <span class="certificate">${path.certificate}</span>
+                    <a href="#" class="start-path"  data-path-id="${path.id}">
+                        Start path <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+      `).join("");
+
+    // Handle Start path clicks
+    document.querySelectorAll(".start-path").forEach((button) => {
+        button.addEventListener("click", (event) => {
+            event.preventDefault();
+            const pathId = Number(button.dataset.pathId);
+            const selectedPath = learningPaths.find(path => path.id === pathId)
+
+            alert(`You selected: ${selectedPath.title}`);
+        });
+    })
+    </script>
+  </body>
+</html>

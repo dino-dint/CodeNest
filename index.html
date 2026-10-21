@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CodeNest</title>
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="assets/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="assets/dist/css/style.css" />
+  </head>
+
+  <body>
+    <!-- Main Navigation Bar: Sticky header featuring CodeNest brand, primary navigation links, and call-to-action buttons -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-black shadow sticky-top codenest-navbar"
+    >
+      <div class="container-fluid px-3 px-lg-5">
+        <a
+          href="#"
+          class="navbar-brand d-flex align-items-center gap-2 codenest-brand-link"
+        >
+          <div class="codenest-brand">
+            <i class="bi bi-braces fs-3 text-white"></i>
+          </div>
+
+          <span class="fs-4 fw-bold codenest-span"> CodeNest </span>
+        </a>
+        <button
+          class="navbar-toggler border-secondary"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#codenestNavbar"
+          aria-controls="codenestNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible navigation menu and user action links (Sign In & Start Learning CTA) -->
+        <div class="collapse navbar-collapse" id="codenestNavbar">
+          <ul class="navbar-nav mx-auto my-3 my-lg-0 gap-lg-4 text-center">
+            <li class="nav-item">
+              <a
+                href="#codenest-hero"
+                class="nav-link active text-white"
+                id="home"
+              >
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="courses.html" class="nav-link text-white-50">
+                Courses
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="path.html" class="nav-link text-white-50">
+                Learning path
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="challenge.html" class="nav-link text-white-50">
+                Challenges
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="community.html" class="nav-link text-white-50">
+                Community
+              </a>
+            </li>
+          </ul>
+          <div
+            class="d-flex flex-column flex-lg-row align-items-center gap-3 pb-3 pb-lg-0"
+          >
+            <a
+              href="#"
+              class="text-white fw-bold fs-6 text-decoration-none codenest-sign"
+            >
+              Sign in
+            </a>
+
+            <a
+              href="#courses"
+              class="btn btn-primary rounded-0 codenest-button"
+            >
+              Start Learning
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section: Value proposition, headline, primary CTAs, platform ratings, and tech badge showcase -->
+    <section
+      class="container-fluid bg-black text-white codenest-hero"
+      id="codenest-hero"
+    >
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-12 col-lg-6">
+            <div class="hero-left-side d-flex flex-column gap-4">
+              <span class="codenest-span fs-6">
+                THE SMARTER WAY TO LEARN CODE
+              </span>
+
+              <div class="codenest-hero-title">
+                <h1 class="codenest-hero-h1-left fw-bold">Build. Break.</h1>
+
+                <h1 class="codenest-hero-h1-left fw-bold">
+                  Learn.
+
+                  <span class="text-danger text-decoration-underline">
+                    Repeat.
+                  </span>
+                </h1>
+              </div>
+              <p
+                class="fs-5 fw-semibold text-white-50 codenest-hero-description"
+              >
+                Practical coding courses that take you from curious beginner to
+                confident developer. Learn at your pace, build real projects,
+                and never code alone.
+              </p>
+              <div class="d-flex flex-wrap gap-3 mb-4">
+                <a
+                  href="#courses"
+                  class="btn btn-primary codenest-hero-btn d-flex align-items-center justify-content-center gap-2"
+                >
+                  <span class="fw-bold fs-6"> Explore Courses </span>
+
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+                <a
+                  href="#learning-path"
+                  class="btn btn-outline-light codenest-hero-btn-1 d-flex align-items-center justify-content-center"
+                >
+                  <span class="fw-bold fs-6"> How it Works </span>
+                </a>
+              </div>
+              <div class="codenest-rate d-flex flex-wrap gap-4 gap-md-5">
+                <div>
+                  <h4 class="fs-5 fw-bold mb-1">120+</h4>
+
+                  <small> hands-on Lessons </small>
+                </div>
+                <div>
+                  <h4 class="fs-5 fw-bold mb-1">18K</h4>
+
+                  <small> active learners </small>
+                </div>
+                <div>
+                  <h4 class="fs-5 fw-bold mb-1">4.9/5</h4>
+
+                  <small> student rating </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <!-- Hero Showcase: Platform preview card with floating technology stack badges -->
+            <div class="hero-right-side">
+              <div class="hero-right-side-img shadow-lg">
+                <img
+                  src="images/hero.jpg"
+                  alt="CodeNest coding course"
+                  class="img-fluid"
+                />
+
+                <div class="codenest-hero-card">
+                  <span class="hero-tech-tag bg-danger"> HTML </span>
+
+                  <span class="hero-tech-tag bg-info"> CSS </span>
+
+                  <span class="hero-tech-tag bg-warning text-dark">
+                    JavaScript
+                  </span>
+
+                  <span class="hero-tech-tag bg-success"> Bootstrap </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Technology Ticker: Seamless marquee showcasing supported programming languages, frameworks, and developer tools -->
+    <section class="container-fluid bg-black p-0">
+      <div class="ticker-wrap">
+        <div class="ticker">
+          <div class="ticker-group">
+            <span class="ticker-item">TypeScript</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Rust</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Go</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">SQL</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">React</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">GraphQL</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Docker</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Kubernetes</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">C++</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Java</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Swift</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Kotlin</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Python</span>
+            <span class="bullet">·</span>
+          </div>
+          <div class="ticker-group">
+            <span class="ticker-item">TypeScript</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Rust</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Go</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">SQL</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">React</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">GraphQL</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Docker</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Kubernetes</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">C++</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Java</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Swift</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Kotlin</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Python</span>
+            <span class="bullet">·</span>
+          </div>
+          <div class="ticker-group">
+            <span class="ticker-item">TypeScript</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Rust</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Go</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">SQL</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">React</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">GraphQL</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Docker</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Kubernetes</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">C++</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Java</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Swift</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Kotlin</span>
+            <span class="bullet">·</span>
+
+            <span class="ticker-item">Python</span>
+            <span class="bullet">·</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Courses Catalog: Curriculum overview highlighting foundational learning tracks across skill levels -->
+    <section class="container-fluid codenest-courses-section" id="courses">
+      <div class="container">
+        <div class="mb-5">
+          <small class="fs-6 fw-semibold text-black"> START LEARNING </small>
+
+          <div class="row align-items-end g-4 mt-2">
+            <div class="col-12 col-lg-6">
+              <h2 class="fw-bold codenest-feature-h1 mb-0">
+                Pick your starting point.
+              </h2>
+            </div>
+            <div class="col-12 col-lg-6">
+              <p class="fw-normal fs-5 mb-0">
+                Focused learning paths, carefully designed to turn knowledge
+                into practical, job-ready skills.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Featured Course Cards: Structured cards detailing level badge, title, duration, lessons count, and course link -->
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="card border-2 border-black p-3 codenest-feature-card h-100"
+            >
+              <div
+                class="card-header d-flex justify-content-between align-items-center border-0 bg-light"
+              >
+                <p class="fs-3 fw-medium mb-0">01</p>
+
+                <span class="codenest-feature-logo">
+                  <i class="bi bi-code-slash"></i>
+                </span>
+              </div>
+              <div class="card-body">
+                <p class="fs-6 fw-medium text-dark-emphasis">BEGINNER</p>
+
+                <h4 class="mb-4 fw-bold">HTML & CSS Foundations</h4>
+
+                <p class="fw-medium">
+                  Build clean, responsive websites from the ground up with
+                  semantic HTML and modern CSS.
+                </p>
+
+                <hr />
+
+                <div class="d-flex flex-wrap gap-4">
+                  <small class="fs-6 fw-medium text-muted"> 24 lessons </small>
+
+                  <small class="fs-6 fw-medium text-muted"> 6 weeks </small>
+                </div>
+
+                <hr />
+              </div>
+              <div class="card-footer border-0 bg-light">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-medium fs-6"> View Courses </span>
+
+                  <a href="#" class="btn btn-dark rounded-circle course-link">
+                    <i class="bi bi-arrow-up-right text-light course-arrow"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="card border-2 border-black p-3 codenest-feature-card h-100"
+            >
+              <div
+                class="card-header d-flex justify-content-between align-items-center border-0 bg-light"
+              >
+                <p class="fs-3 fw-medium mb-0">02</p>
+
+                <span class="codenest-feature-logo-1"> JS </span>
+              </div>
+
+              <div class="card-body">
+                <p class="fs-6 fw-medium text-dark-emphasis">POPULAR</p>
+
+                <h4 class="mb-4 fw-bold">JavaScript Essentials</h4>
+
+                <p class="fw-medium">
+                  Learn the language of the web through practical challenges and
+                  interactive projects.
+                </p>
+
+                <hr />
+
+                <div class="d-flex flex-wrap gap-4">
+                  <small class="fs-6 fw-medium text-muted"> 32 lessons </small>
+
+                  <small class="fs-6 fw-medium text-muted"> 8 weeks </small>
+                </div>
+
+                <hr />
+              </div>
+
+              <div class="card-footer border-0 bg-light">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-medium fs-6"> View Courses </span>
+
+                  <a href="#" class="btn btn-dark rounded-circle course-link">
+                    <i class="bi bi-arrow-up-right text-light course-arrow"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="card border-2 border-black p-3 codenest-feature-card h-100"
+            >
+              <div
+                class="card-header d-flex justify-content-between align-items-center border-0 bg-light"
+              >
+                <p class="fs-3 fw-medium mb-0">03</p>
+
+                <span class="codenest-feature-logo-2">
+                  <i class="bi bi-bootstrap"></i>
+                </span>
+              </div>
+
+              <div class="card-body">
+                <p class="fs-6 fw-medium text-dark-emphasis">BEGINNER</p>
+
+                <h4 class="mb-4 fw-bold">Bootstrap UI Design</h4>
+
+                <p class="fw-medium">
+                  Build responsive, mobile-first websites quickly using
+                  pre-styled components, flexible grids, and utility classes.
+                </p>
+
+                <hr />
+
+                <div class="d-flex flex-wrap gap-4">
+                  <small class="fs-6 fw-medium text-muted"> 20 lessons </small>
+
+                  <small class="fs-6 fw-medium text-muted"> 4 weeks </small>
+                </div>
+
+                <hr />
+              </div>
+
+              <div class="card-footer border-0 bg-light">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-medium fs-6"> View Courses </span>
+
+                  <a href="#" class="btn btn-dark rounded-circle course-link">
+                    <i class="bi bi-arrow-up-right text-light course-arrow"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="card border-2 border-black p-3 codenest-feature-card h-100"
+            >
+              <div
+                class="card-header d-flex justify-content-between align-items-center border-0 bg-light"
+              >
+                <p class="fs-3 fw-medium mb-0">04</p>
+
+                <span class="codenest-feature-logo-3">
+                  <i class="bi bi-filetype-py"></i>
+                </span>
+              </div>
+
+              <div class="card-body">
+                <p class="fs-6 fw-medium text-dark-emphasis">BEGINNER</p>
+
+                <h4 class="mb-4 fw-bold">Python Programming</h4>
+
+                <p class="fw-medium">
+                  Master versatile syntax, data structures, and automation
+                  workflows for backend development and data science.
+                </p>
+
+                <hr />
+
+                <div class="d-flex flex-wrap gap-4">
+                  <small class="fs-6 fw-medium text-muted"> 32 lessons </small>
+
+                  <small class="fs-6 fw-medium text-muted"> 8 weeks </small>
+                </div>
+
+                <hr />
+              </div>
+
+              <div class="card-footer border-0 bg-light">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-medium fs-6"> View Courses </span>
+
+                  <a href="#" class="btn btn-dark rounded-circle course-link">
+                    <i class="bi bi-arrow-up-right text-light course-arrow"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="card border-2 border-black p-3 codenest-feature-card h-100"
+            >
+              <div
+                class="card-header d-flex justify-content-between align-items-center border-0 bg-light"
+              >
+                <p class="fs-3 fw-medium mb-0">05</p>
+
+                <span class="codenest-feature-logo-1">
+                  <i class="bi bi-cup-hot"></i>
+                </span>
+              </div>
+
+              <div class="card-body">
+                <p class="fs-6 fw-medium text-dark-emphasis">INTERMEDIATE</p>
+
+                <h4 class="mb-4 fw-bold">Java Software Engineering</h4>
+
+                <p class="fw-medium">
+                  Dive into OOP principles, enterprise application
+                  architectures, and robust backend systems.
+                </p>
+
+                <hr />
+
+                <div class="d-flex flex-wrap gap-4">
+                  <small class="fs-6 fw-medium text-muted"> 30 lessons </small>
+
+                  <small class="fs-6 fw-medium text-muted"> 9 weeks </small>
+                </div>
+
+                <hr />
+              </div>
+
+              <div class="card-footer border-0 bg-light">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-medium fs-6"> View Courses </span>
+
+                  <a href="#" class="btn btn-dark rounded-circle course-link">
+                    <i class="bi bi-arrow-up-right text-light course-arrow"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="card border-2 border-black p-3 codenest-feature-card h-100"
+            >
+              <div
+                class="card-header d-flex justify-content-between align-items-center border-0 bg-light"
+              >
+                <p class="fs-3 fw-medium mb-0">06</p>
+
+                <span class="codenest-feature-logo-2">
+                  <i class="bi bi-gear"></i>
+                </span>
+              </div>
+
+              <div class="card-body">
+                <p class="fs-6 fw-medium text-dark-emphasis">ADVANCED</p>
+
+                <h4 class="mb-4 fw-bold">C++ System Development</h4>
+
+                <p class="fw-medium">
+                  Create high-performance software, game engines, and
+                  memory-efficient applications with low-level control.
+                </p>
+
+                <hr />
+
+                <div class="d-flex flex-wrap gap-4">
+                  <small class="fs-6 fw-medium text-muted"> 35 lessons </small>
+
+                  <small class="fs-6 fw-medium text-muted"> 10 weeks </small>
+                </div>
+
+                <hr />
+              </div>
+
+              <div class="card-footer border-0 bg-light">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-medium fs-6"> View Courses </span>
+
+                  <a href="#" class="btn btn-dark rounded-circle course-link">
+                    <i class="bi bi-arrow-up-right text-light course-arrow"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- How It Works Section: 3-step structured learning journey from path selection to building and shipping projects -->
+    <section class="codenest-how-to-section" id="learning-path">
+      <div class="container">
+        <hr class="codenest-section-border" />
+      </div>
+
+      <div class="codenest-how-to-background">
+        <div class="container">
+          <div class="codenest-how-to">
+            <small class="fs-6 fw-semibold text-black codenest-section-label">
+              HOW IT WORKS
+            </small>
+
+            <div class="row g-5 mt-2">
+              <div class="col-12 col-lg-6">
+                <h2 class="fw-bold codenest-how-to-h1">A clear path</h2>
+
+                <h2 class="fw-bold codenest-how-to-h1">
+                  from the first line to
+                </h2>
+
+                <h2 class="fw-bold codenest-how-to-h1">launch.</h2>
+
+                <p class="fw-normal fs-5 text-dark-emphasis mt-4">
+                  No endless tutorials. No guessing what comes next. Just a
+                  focused route designed to keep you moving.
+                </p>
+
+                <a
+                  href="path.html"
+                  class="btn btn-dark codenest-how-to-btn mt-4"
+                >
+                  Find your path
+
+                  <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="how-step">
+                  <hr />
+
+                  <div
+                    class="d-flex justify-content-between align-items-center gap-3"
+                  >
+                    <span class="fw-bold"> 01 </span>
+
+                    <h4 class="fw-bold text-end mb-0">Choose your path</h4>
+                  </div>
+
+                  <p class="text-end fw-medium mt-3 mb-0">
+                    Select a learning track built around your goals, from
+                    frontend basics to full-stack apps.
+                  </p>
+                </div>
+                <div class="how-step">
+                  <hr />
+
+                  <div
+                    class="d-flex justify-content-between align-items-center gap-3"
+                  >
+                    <span class="fw-bold"> 02 </span>
+
+                    <h4 class="fw-bold text-end mb-0">Learn by building</h4>
+                  </div>
+
+                  <p class="text-end fw-medium mt-3 mb-0">
+                    Write real code from lesson one with guided projects,
+                    challenges, and instant feedback.
+                  </p>
+                </div>
+                <div class="how-step">
+                  <hr />
+
+                  <div
+                    class="d-flex justify-content-between align-items-center gap-3"
+                  >
+                    <span class="fw-bold"> 03 </span>
+
+                    <h4 class="fw-bold text-end mb-0">Ship your work</h4>
+                  </div>
+
+                  <p class="text-end fw-medium mt-3 mb-0">
+                    Build projects, share your work, and turn your learning into
+                    a real portfolio.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Community Section: Collaborative learning call-to-action encouraging learners to join the community -->
+    <section class="container-fluid grid-background" id="community">
+      <div class="container p-4 p-md-5 text-center">
+        <div class="py-5">
+          <p class="fw-bold text-secondary mb-3">YOU'RE NOT CODING ALONE</p>
+
+          <h2 class="fw-bolder codenest-cta-h1 text-white mt-3">
+            Learn with a community that wants
+            <span class="d-lg-block"> you to win. </span>
+          </h2>
+
+          <p class="text-secondary fw-semibold codenest-cta-description mt-4">
+            Ask questions, share your work, and celebrate every breakthrough
+            with thousands of learners building alongside you.
+          </p>
+
+          <a
+            href="community.html"
+            class="btn codenest-cta-btn mt-4 d-inline-flex align-items-center justify-content-center"
+          >
+            Join the community
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Site Footer: Brand identity, learning philosophy tagline, and copyright notice -->
+    <footer class="container-fluid py-4 border-top border-dark codenest-footer">
+      <div class="container-xxl">
+        <div class="row align-items-center text-center text-lg-start gy-4">
+          <div class="col-12 col-lg-4">
+            <a
+              href="#"
+              class="navbar-brand d-inline-flex align-items-center gap-2"
+            >
+              <div class="codenest-brand">
+                <i class="bi bi-braces fs-3 text-white"></i>
+              </div>
+
+              <span class="text-secondary fs-5"> CodeNest </span>
+            </a>
+          </div>
+          <div class="col-12 col-lg-4 mb-3 mb-lg-0 text-lg-center">
+            <span class="text-secondary small"
+              >Learn deeply. Build boldly.</span
+            >
+          </div>
+          <div class="col-12 col-lg-4 text-lg-end">
+            <span class="text-secondary small">
+              &copy; 2026 CodeNest Learning Co.
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap Bundle JavaScript: Powers responsive interactive components such as navbar collapse -->
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

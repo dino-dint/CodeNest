@@ -1,0 +1,769 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="assets/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/dist/css/style.css" />
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Main Navigation Bar: Sticky header featuring CodeNest brand, primary navigation links, and call-to-action buttons -->
+
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-black shadow sticky-top codenest-navbar"
+    >
+      <div class="container-fluid px-3 px-lg-5">
+        <a
+          href="#"
+          class="navbar-brand d-flex align-items-center gap-2 codenest-brand-link"
+        >
+          <div class="codenest-brand">
+            <i class="bi bi-braces fs-3 text-white"></i>
+          </div>
+
+          <span class="fs-4 fw-bold codenest-span"> CodeNest </span>
+        </a>
+
+        <button
+          class="navbar-toggler border-secondary"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#codenestNavbar"
+          aria-controls="codenestNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible navigation menu and user action links (Sign In & Start Learning CTA) -->
+
+        <div class="collapse navbar-collapse" id="codenestNavbar">
+          <ul class="navbar-nav mx-auto my-3 my-lg-0 gap-lg-4 text-center">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active text-white"> Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="courses.html" class="nav-link text-white-50">
+                Courses
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="path.html" class="nav-link text-white-50">
+                Learning path
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="challenge.html" class="nav-link text-white-50">
+                Challenges
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="community.html" class="nav-link text-white-50">
+                Community
+              </a>
+            </li>
+          </ul>
+
+          <div
+            class="d-flex flex-column flex-lg-row align-items-center gap-3 pb-3 pb-lg-0"
+          >
+            <a
+              href="#"
+              class="text-white fw-bold fs-6 text-decoration-none codenest-sign"
+            >
+              Sign in
+            </a>
+
+            <a
+              href="#courses"
+              class="btn btn-primary rounded-0 codenest-button"
+            >
+              Start Learning
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- End of Courses Nav -->
+
+    <!-- Hero Section: Course catalog header highlighting catalog status, course count, and track metrics -->
+
+    <section class="container-fluid bg-black text-white codenest-hero">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-12 col-lg-6">
+            <div class="hero-left-side d-flex flex-column gap-4">
+              <span class="codenest-span fs-6 text-info"
+                >//Courses Catalog</span
+              >
+
+              <div class="codenest-hero-title">
+                <h1 class="codenest-hero-h1-left fw-bold text-white">
+                  Learn by doing.
+                </h1>
+
+                <h1 class="codenest-hero-h1-left fw-bold text-info">
+                  Ship by building.
+                </h1>
+              </div>
+
+              <p
+                class="fs-5 mt-2 fw-semibold text-white-50 codenest-hero-description"
+              >
+                Practice in a real browser IDE, get instant feedback, and finish
+                every course with work you can show.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="hero-right-side py-lg-5 mt-5">
+              <div
+                class="hero-right-container text-lg-start font-monospace border border-2 border-white rounded-3 p-5 bg-dark"
+              >
+                <p class="text-white-50 fs-6 fw-normal mb-0">CATALOG_STATUS</p>
+
+                <h1 class="fw-bolder mt-0">
+                  340
+
+                  <span class="text-info">courses.</span>
+                </h1>
+
+                <small
+                  class="fs-6 font-monospace text-success d-flex align-items-center gap-2"
+                >
+                  <span
+                    class="bg-success rounded-circle d-inline-block flex-shrink-0"
+                    style="width: 8px; height: 8px"
+                  ></span>
+
+                  28 tracks online
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End of Hero -->
+
+    <!-- Courses Catalog Section: Interactive course browser with real-time keyword search, difficulty filtering, and dynamic card rendering -->
+
+    <div class="container-fluid bg-light-subtle">
+      <div class="container py-5">
+        <!-- Course Toolbar: Controls for real-time course search and difficulty level filtering -->
+
+        <div
+          class="course-toolbar d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3 mb-5"
+        >
+          <!-- Course Search Control: Redesigned input with search icon, live filtering on input, and responsive sizing -->
+
+          <div class="course-search-wrapper">
+            <div class="course-search-group">
+              <span class="course-search-icon" aria-hidden="true">
+                <i class="bi bi-search"></i>
+              </span>
+
+              <input
+                type="text"
+                id="searchInput"
+                class="form-control course-search-input"
+                placeholder="Search courses by title, topic, or keyword..."
+                aria-label="Search courses"
+              />
+            </div>
+          </div>
+
+          <!-- Course Difficulty Filters: Filter buttons for filtering courses by difficulty level (All, Beginner, Intermediate, Advanced) -->
+
+          <div
+            class="course-filter-group"
+            role="group"
+            aria-label="Course difficulty filter"
+          >
+            <button
+              type="button"
+              class="btn filter-btn active"
+              data-level="all"
+            >
+              <i class="bi bi-funnel-fill me-1"></i>All
+            </button>
+
+            <button type="button" class="btn filter-btn" data-level="BEGINNER">
+              Beginner
+            </button>
+
+            <button
+              type="button"
+              class="btn filter-btn"
+              data-level="INTERMEDIATE"
+            >
+              Intermediate
+            </button>
+
+            <button type="button" class="btn filter-btn" data-level="ADVANCED">
+              Advanced
+            </button>
+          </div>
+        </div>
+
+        <!-- Course Cards Grid: Target container dynamically populated and filtered via JavaScript -->
+
+        <div id="cardContainer" class="row g-4"></div>
+      </div>
+    </div>
+
+    <!-- Pathfinder Recommendation Banner: Skill check call to action guiding learners to personalized curriculum tracks -->
+
+    <div class="container-fluid bg-black">
+      <div class="container py-4">
+        <div class="row justify-content-center">
+          <div class="col-12 col-xl-10">
+            <!-- Pathfinder Banner Component -->
+
+            <div class="pathfinder-card p-4 p-md-5">
+              <div class="row align-items-center g-4">
+                <!-- Left Content Column -->
+
+                <div class="col-12 col-lg-9">
+                  <div class="font-mono-tag mb-2">// pathfinder</div>
+
+                  <h2 class="pathfinder-title h3 mb-2 text-white">
+                    Not sure where to begin?
+                  </h2>
+
+                  <p class="pathfinder-subtitle mb-0">
+                    Take a 3-minute skill check and get a path built around your
+                    goals.
+                  </p>
+                </div>
+
+                <!-- Right Button Column -->
+
+                <div class="col-12 col-lg-3 text-lg-end">
+                  <a href="#explore" class="btn btn-pathfinder w-100 w-lg-auto">
+                    Find my path
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Site Footer: Brand identity, learning philosophy tagline, and copyright notice -->
+
+    <footer class="container-fluid py-4 border-top border-dark codenest-footer">
+      <div class="container-xxl">
+        <div class="row align-items-center text-center text-lg-start gy-4">
+          <div class="col-12 col-lg-4">
+            <a
+              href="#"
+              class="navbar-brand d-inline-flex align-items-center gap-2"
+            >
+              <div class="codenest-brand">
+                <i class="bi bi-braces fs-3 text-white"></i>
+              </div>
+
+              <span class="text-secondary fs-5"> CodeNest </span>
+            </a>
+          </div>
+
+          <div class="col-12 col-lg-4 mb-3 mb-lg-0 text-lg-center">
+            <span class="text-secondary small"
+              >Learn deeply. Build boldly.</span
+            >
+          </div>
+
+          <div class="col-12 col-lg-4 text-lg-end">
+            <span class="text-secondary small">
+              &copy; 2026 CodeNest Learning Co.
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Client-side Application Logic: Course dataset definition, dynamic HTML card rendering, live keyword search, and difficulty filtering -->
+
+    <script>
+      const courses = [
+        {
+          category: "Python",
+
+          level: "BEGINNER",
+
+          title: "Python Fundamentals",
+
+          description: "Variables, loops, functions, and OOP from zero.",
+
+          lessons: "42 lessons",
+
+          duration: "18h",
+
+          enrolled: "84.2k enrolled",
+        },
+
+        {
+          category: "HTML & CSS",
+
+          level: "BEGINNER",
+
+          title: "Web Design Fundamentals",
+
+          description: "Build your first responsive websites from scratch.",
+
+          lessons: "36 lessons",
+
+          duration: "15h",
+
+          enrolled: "92.7k enrolled",
+        },
+
+        {
+          category: "JavaScript",
+
+          level: "BEGINNER",
+
+          title: "JavaScript Essentials",
+
+          description: "Learn variables, functions, arrays, and basic DOM.",
+
+          lessons: "40 lessons",
+
+          duration: "17h",
+
+          enrolled: "76.4k enrolled",
+        },
+
+        {
+          category: "Git",
+
+          level: "BEGINNER",
+
+          title: "Git & GitHub Basics",
+
+          description: "Learn version control and collaborate with developers.",
+
+          lessons: "28 lessons",
+
+          duration: "10h",
+
+          enrolled: "58.9k enrolled",
+        },
+
+        {
+          category: "SQL",
+
+          level: "BEGINNER",
+
+          title: "SQL for Beginners",
+
+          description: "Learn databases, queries, tables, and relationships.",
+
+          lessons: "32 lessons",
+
+          duration: "13h",
+
+          enrolled: "63.5k enrolled",
+        },
+
+        {
+          category: "React",
+
+          level: "INTERMEDIATE",
+
+          title: "React Development",
+
+          description: "Build modern interfaces using React components.",
+
+          lessons: "48 lessons",
+
+          duration: "22h",
+
+          enrolled: "61.8k enrolled",
+        },
+
+        {
+          category: "Node.js",
+
+          level: "INTERMEDIATE",
+
+          title: "Node.js Backend",
+
+          description: "Create powerful backend applications with Node.js.",
+
+          lessons: "45 lessons",
+
+          duration: "21h",
+
+          enrolled: "49.3k enrolled",
+        },
+
+        {
+          category: "Java",
+
+          level: "INTERMEDIATE",
+
+          title: "Java Programming",
+
+          description: "Master object-oriented programming with real projects.",
+
+          lessons: "52 lessons",
+
+          duration: "25h",
+
+          enrolled: "54.7k enrolled",
+        },
+
+        {
+          category: "Python",
+
+          level: "INTERMEDIATE",
+
+          title: "Python Web Development",
+
+          description: "Build web applications using Python and Flask.",
+
+          lessons: "46 lessons",
+
+          duration: "20h",
+
+          enrolled: "47.2k enrolled",
+        },
+
+        {
+          category: "TypeScript",
+
+          level: "INTERMEDIATE",
+
+          title: "TypeScript for Developers",
+
+          description: "Write safer and scalable JavaScript applications.",
+
+          lessons: "38 lessons",
+
+          duration: "16h",
+
+          enrolled: "39.8k enrolled",
+        },
+
+        {
+          category: "MongoDB",
+
+          level: "INTERMEDIATE",
+
+          title: "MongoDB Database Design",
+
+          description: "Design flexible NoSQL databases for modern apps.",
+
+          lessons: "34 lessons",
+
+          duration: "14h",
+
+          enrolled: "31.6k enrolled",
+        },
+
+        {
+          category: "UI/UX",
+
+          level: "INTERMEDIATE",
+
+          title: "Modern UI/UX Design",
+
+          description: "Design clean interfaces and better user experiences.",
+
+          lessons: "41 lessons",
+
+          duration: "18h",
+
+          enrolled: "44.1k enrolled",
+        },
+
+        {
+          category: "Docker",
+
+          level: "INTERMEDIATE",
+
+          title: "Docker Essentials",
+
+          description:
+            "Containerize applications and manage development environments.",
+
+          lessons: "37 lessons",
+
+          duration: "15h",
+
+          enrolled: "36.9k enrolled",
+        },
+
+        {
+          category: "React",
+
+          level: "ADVANCED",
+
+          title: "Advanced React Architecture",
+
+          description:
+            "Build scalable React applications with advanced patterns.",
+
+          lessons: "58 lessons",
+
+          duration: "29h",
+
+          enrolled: "28.4k enrolled",
+        },
+
+        {
+          category: "Cybersecurity",
+
+          level: "ADVANCED",
+
+          title: "Advanced Cybersecurity",
+
+          description:
+            "Learn penetration testing and advanced security concepts.",
+
+          lessons: "64 lessons",
+
+          duration: "32h",
+
+          enrolled: "24.7k enrolled",
+        },
+
+        {
+          category: "Cloud",
+
+          level: "ADVANCED",
+
+          title: "Cloud Architecture",
+
+          description: "Design scalable and highly available cloud systems.",
+
+          lessons: "55 lessons",
+
+          duration: "27h",
+
+          enrolled: "21.5k enrolled",
+        },
+
+        {
+          category: "DevOps",
+
+          level: "ADVANCED",
+
+          title: "DevOps Engineering",
+
+          description: "Build CI/CD pipelines and automate deployments.",
+
+          lessons: "61 lessons",
+
+          duration: "30h",
+
+          enrolled: "26.8k enrolled",
+        },
+
+        {
+          category: "AI & ML",
+
+          level: "ADVANCED",
+
+          title: "Machine Learning Engineering",
+
+          description: "Build and deploy practical machine learning models.",
+
+          lessons: "72 lessons",
+
+          duration: "38h",
+
+          enrolled: "32.6k enrolled",
+        },
+
+        {
+          category: "Kubernetes",
+
+          level: "ADVANCED",
+
+          title: "Kubernetes in Production",
+
+          description: "Deploy, scale, and manage production containers.",
+
+          lessons: "49 lessons",
+
+          duration: "24h",
+
+          enrolled: "18.9k enrolled",
+        },
+
+        {
+          category: "System Design",
+
+          level: "ADVANCED",
+
+          title: "Advanced System Design",
+
+          description: "Design reliable and scalable distributed systems.",
+
+          lessons: "57 lessons",
+
+          duration: "28h",
+
+          enrolled: "20.3k enrolled",
+        },
+      ];
+
+      const courseContainer = document.getElementById("cardContainer");
+
+      const searchInput = document.getElementById("searchInput");
+
+      const filterButtons = document.querySelectorAll(".filter-btn");
+
+      let selectedLevel = "all";
+
+      function displayCourses(courseList) {
+        courseContainer.innerHTML = "";
+
+        // No results
+
+        if (courseList.length === 0) {
+          courseContainer.innerHTML = `
+
+            <div class="col-12 text-center py-5">
+
+              <h3 class="text-dark">
+
+                No courses found
+
+              </h3>
+
+              <p class="text-dark">
+
+                Try another search or filter
+
+              </p>
+
+            </div>
+
+          `;
+
+          return;
+        }
+
+        //create cards
+
+        courseList.forEach((course) => {
+          courseContainer.innerHTML += `
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="course-card h-100 p-4 text-black">
+
+                  <div class="course-card-top">
+
+                    <span class="course-category text-muted">${course.category}</span>
+
+                    <span class="course-level">${course.level}</span>
+
+                  </div>
+
+                  <div class="">
+
+                    <h2 class="course-title text-black">${course.title}</h2>
+
+                    <p class="course-description text-black">${course.description}</p>  
+
+                  </div>
+
+                  <hr class="course-divider text-black">
+
+                  <div class="course-info card-footer text-black">
+
+                    <span>
+
+                      ${course.lessons}
+
+                      <span class="dot">.</span>
+
+                      ${course.duration}
+
+                    </span>
+
+                    <span>${course.enrolled}</span>
+
+                  </div>
+
+                </div>
+
+            </div>   
+
+          `;
+        });
+      }
+
+      function filterCourses() {
+        const searchValue = searchInput.value
+
+          .toLowerCase()
+
+          .trim();
+
+        const filteredCourses = courses.filter((course) => {
+          //Search
+
+          const matchesSearch =
+            course.title.toLowerCase().includes(searchValue) ||
+            course.category.toLowerCase().includes(searchValue) ||
+            course.description.toLowerCase().includes(searchValue) ||
+            course.level.toLowerCase().includes(searchValue);
+
+          //Level
+
+          const matchesLevel =
+            selectedLevel === "all" || course.level === selectedLevel;
+
+          return matchesSearch && matchesLevel;
+        });
+
+        displayCourses(filteredCourses);
+      }
+
+      searchInput.addEventListener("input", function () {
+        filterCourses();
+      });
+
+      //filter button
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          selectedLevel = this.dataset.level;
+
+          filterButtons.forEach((btn) => {
+            btn.classList.remove("active");
+          });
+
+          this.classList.add("active");
+
+          filterCourses();
+        });
+      });
+
+      displayCourses(courses);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1860 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* NavBar */
+.codenest-navbar {
+  border-bottom: 1px solid rgba(245, 245, 245, 0.68);
+  z-index: 9999;
+}
+
+/* NavBarBrand */
+.codenest-brand-link {
+  transition: transform 0.2s ease;
+}
+
+.codenest-brand-link:hover {
+  transform: translateY(-3px);
+}
+
+.codenest-span {
+  transition: color 0.2s ease;
+}
+
+.codenest-span:hover {
+  color: rgb(95, 95, 95);
+}
+
+/* NavBarLogo */
+.codenest-brand {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #212529;
+
+  border-radius: 50%;
+
+  flex-shrink: 0;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.codenest-brand:hover {
+  transform: translateY(-4px);
+  background-color: #343a40;
+}
+
+/* NavBar Link */
+.codenest-navbar .nav-link {
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.codenest-navbar .nav-link:hover {
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+/* NavBar Start learning btn */
+.codenest-button {
+  width: 150px;
+  min-height: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.codenest-button:hover {
+  transform: translateY(-5px);
+  opacity: 0.9;
+}
+
+/* Hero Section */
+.codenest-hero {
+  min-height: auto;
+  padding: 90px 0 100px;
+}
+
+/* Hero Left Side */
+.hero-left-side {
+  width: 100%;
+}
+
+.hero-left-side .codenest-span {
+  color: chartreuse;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+
+/* HERO HEADING
+   clamp() allows the heading to automatically scale between
+   phone, tablet and desktop sizes. */
+.codenest-hero-h1-left {
+  font-size: clamp(2.8rem, 6vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+
+/* Hero Description */
+.codenest-hero-description {
+  max-width: 650px;
+  line-height: 1.7;
+}
+
+/* Hero btn */
+.codenest-hero-btn,
+.codenest-hero-btn-1 {
+  width: 200px;
+  min-height: 60px;
+
+  border-radius: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.codenest-hero-btn:hover,
+.codenest-hero-btn-1:hover {
+  transform: translateY(-5px);
+}
+
+.codenest-hero-btn-1:hover {
+  background-color: rgb(95, 95, 95);
+}
+
+/* Hero stats */
+.codenest-rate {
+  color: white;
+}
+
+.codenest-rate small {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Hero right side */
+.hero-right-side {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Hero img container */
+.hero-right-side-img {
+  position: relative;
+
+  width: min(100%, 600px);
+  aspect-ratio: 6 / 5;
+
+  border: 4px solid black;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  background-color: #111;
+}
+
+/* Hero img */
+.hero-right-side-img > img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* Hero tech tags */
+.codenest-hero-card {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 15px;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  backdrop-filter: blur(5px);
+}
+
+/* hero tech tag */
+.hero-tech-tag {
+  min-width: 90px;
+  min-height: 45px;
+
+  padding: 10px 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  font-weight: 600;
+
+  border-radius: 4px;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.hero-tech-tag:hover {
+  transform: translateY(-4px);
+  opacity: 0.9;
+}
+
+/* Tech Ticker */
+.ticker-wrap {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #0d1117;
+
+  border-top: 1px solid #21262d;
+  border-bottom: 1px solid #21262d;
+
+  padding: 12px 0;
+
+  white-space: nowrap;
+
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
+
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
+}
+
+/* Ticker */
+.ticker {
+  display: flex;
+  width: max-content;
+
+  animation: marquee 25s linear infinite;
+}
+
+.ticker:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+/* Ticker Group */
+.ticker-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Ticker Item */
+.ticker-item {
+  display: inline-block;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  color: #8b949e;
+
+  padding: 0 16px;
+
+  letter-spacing: 0.3px;
+
+  transition: color 0.2s ease;
+}
+
+.ticker-item:hover {
+  color: #f0f6fc;
+}
+
+/* Ticker bullet */
+.bullet {
+  display: inline-block;
+
+  color: #484f58;
+
+  padding: 0 4px;
+
+  font-weight: bold;
+}
+
+/*animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Course section */
+.codenest-courses-section {
+  padding: 100px 0;
+}
+
+/* Course section heading */
+.codenest-feature-h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+
+  line-height: 1.05;
+
+  letter-spacing: -0.04em;
+}
+
+/* Course Card */
+.codenest-feature-card {
+  position: relative;
+
+  overflow: hidden;
+
+  background: #fcfafa;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Course Card top border animation */
+.codenest-feature-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 8px;
+
+  background: #ff705c;
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.35s ease;
+
+  z-index: 2;
+}
+
+/* Course card hover */
+.codenest-feature-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 18px 0 rgba(0, 0, 0, 0.12);
+}
+
+.codenest-feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Course card header */
+.codenest-feature-card .card-header {
+  min-height: 80px;
+}
+
+/* Course card logo */
+.codenest-feature-logo,
+.codenest-feature-logo-1,
+.codenest-feature-logo-2,
+.codenest-feature-logo-3 {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid black;
+
+  border-radius: 6px;
+
+  flex-shrink: 0;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* Course card logo */
+.codenest-feature-logo {
+  background-color: rgb(9, 138, 193);
+}
+
+.codenest-feature-logo-1 {
+  background-color: rgb(218, 162, 58);
+}
+
+.codenest-feature-logo-2 {
+  background-color: rgb(197, 6, 255);
+}
+
+.codenest-feature-logo-3 {
+  background-color: rgb(205, 177, 213);
+}
+
+/* Course logo hover */
+.codenest-feature-card:hover .codenest-feature-logo,
+.codenest-feature-card:hover .codenest-feature-logo-1,
+.codenest-feature-card:hover .codenest-feature-logo-2,
+.codenest-feature-card:hover .codenest-feature-logo-3 {
+  transform: rotate(-8deg) scale(1.08);
+
+  background-color: #ff5845;
+}
+
+/* Course card body */
+.codenest-feature-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card description */
+.codenest-feature-card .card-body p.fw-medium {
+  line-height: 1.7;
+
+  min-height: 85px;
+}
+
+/* Card footer */
+.codenest-feature-card .card-footer {
+  margin-top: auto;
+}
+
+/* Course arrows */
+.course-link {
+  width: 42px;
+  height: 42px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.course-arrow {
+  display: inline-block;
+
+  transform-origin: center;
+
+  transition: transform 0.3s ease;
+}
+
+.codenest-feature-card:hover .course-arrow {
+  transform: rotate(45deg);
+}
+
+/* How it works section */
+.codenest-how-to-section {
+  width: 100%;
+  margin-top: 0;
+}
+
+/* top border */
+.codenest-section-border {
+  border: 0;
+  border-top: 2px solid #b5b5b5;
+
+  margin: 0;
+  opacity: 1;
+}
+
+/* Green background */
+.codenest-how-to-background {
+  width: 100%;
+
+  background-color: #ccff00;
+}
+
+/* Content */
+.codenest-how-to {
+  width: 100%;
+
+  padding: 80px 20px;
+}
+
+/* content label */
+.codenest-section-label {
+  display: inline-block;
+
+  letter-spacing: 6px;
+
+  margin-bottom: 20px;
+}
+
+/* Heading */
+.codenest-how-to-h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+
+  margin: 0;
+}
+
+/* Description */
+.codenest-how-to p {
+  line-height: 1.7;
+}
+
+/* btn */
+.codenest-how-to-btn {
+  width: 200px;
+
+  min-height: 65px;
+
+  border-radius: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.codenest-how-to-btn:hover {
+  transform: translateY(-5px);
+}
+
+.how-step {
+  margin-bottom: 35px;
+}
+
+.how-step hr {
+  border: 0;
+
+  border-top: 2px solid #111;
+
+  opacity: 1;
+
+  margin-bottom: 25px;
+}
+
+.how-step p {
+  line-height: 1.7;
+}
+
+/* tablet */
+
+@media (max-width: 991.98px) {
+  .codenest-how-to {
+    padding: 70px 25px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767.98px) {
+  .codenest-how-to {
+    padding: 60px 20px;
+  }
+
+  .codenest-how-to-h1 {
+    font-size: clamp(2.3rem, 10vw, 3.5rem);
+
+    line-height: 1.05;
+  }
+
+  .codenest-section-label {
+    letter-spacing: 4px;
+  }
+
+  .codenest-how-to-btn {
+    width: 100%;
+
+    max-width: 300px;
+  }
+
+  /* Make step descriptions left-aligned on phones */
+
+  .how-step p {
+    text-align: left !important;
+  }
+
+  /* Step title can wrap naturally */
+
+  .how-step h4 {
+    font-size: 1.15rem;
+
+    text-align: right;
+  }
+}
+
+/* small phones */
+
+@media (max-width: 575.98px) {
+  .codenest-how-to {
+    padding: 50px 18px;
+  }
+
+  .codenest-how-to-h1 {
+    font-size: 2.4rem;
+  }
+
+  .codenest-section-label {
+    letter-spacing: 3px;
+
+    font-size: 0.8rem !important;
+  }
+
+  .how-step {
+    margin-bottom: 30px;
+  }
+
+  .how-step h4 {
+    font-size: 1rem;
+  }
+} /*grid background */
+
+.grid-background {
+  background-color: #121316;
+
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+}
+
+/* cta heading */
+
+.codenest-cta-h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+
+  line-height: 1.1;
+
+  letter-spacing: -0.04em;
+}
+
+/* cta description */
+
+.codenest-cta-description {
+  max-width: 750px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  line-height: 1.7;
+}
+
+/* cta btn*/
+
+.codenest-cta-btn {
+  width: 200px;
+  min-height: 70px;
+
+  border-radius: 0;
+
+  background-color: #ccff00;
+
+  color: black;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.codenest-cta-btn:hover {
+  transform: translateY(-5px);
+
+  background-color: #b8e600;
+
+  color: black;
+}
+
+/* footer */
+
+.codenest-footer {
+  background-color: black;
+}
+
+/* footer brand */
+
+.codenest-footer .navbar-brand {
+  transition: transform 0.2s ease;
+}
+
+.codenest-footer .navbar-brand:hover {
+  transform: translateY(-3px);
+}
+
+/* large tablet */
+
+@media (max-width: 991.98px) {
+  /* Navbar becomes mobile menu */
+  .codenest-navbar .navbar-collapse {
+    padding-top: 15px;
+  }
+
+  /* Center mobile navigation */
+  .codenest-navbar .navbar-nav {
+    width: 100%;
+  }
+
+  /* Hero spacing */
+  .codenest-hero {
+    padding: 70px 0;
+  }
+
+  /* Center hero image */
+  .hero-right-side {
+    margin-top: 20px;
+  }
+
+  /* Course section */
+  .codenest-courses-section {
+    padding: 80px 0;
+  }
+
+  /* How it works */
+  .codenest-how-to-wrapper {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+
+/* Tablet/small devices */
+
+@media (max-width: 767.98px) {
+  /* Smaller hero spacing */
+  .codenest-hero {
+    padding: 55px 0 70px;
+  }
+
+  /* Hero heading */
+  .codenest-hero-h1-left {
+    font-size: clamp(2.7rem, 12vw, 4.5rem);
+  }
+
+  /* Hero buttons */
+  .codenest-hero-btn,
+  .codenest-hero-btn-1 {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Hero technology tags */
+  .hero-tech-tag {
+    min-width: 75px;
+    font-size: 0.85rem;
+  }
+
+  /* Courses */
+  .codenest-courses-section {
+    padding: 70px 0;
+  }
+
+  /* Course cards */
+  .codenest-feature-card .card-body p.fw-medium {
+    min-height: auto;
+  }
+
+  /* How It Works */
+  .codenest-how-to {
+    padding: 35px 25px !important;
+  }
+
+  /* How It Works heading */
+  .codenest-how-to-h1 {
+    font-size: clamp(2.3rem, 10vw, 3.5rem);
+  }
+
+  /* How It Works step text */
+  .how-step p {
+    text-align: left !important;
+  }
+
+  /* CTA */
+  .codenest-cta-h1 {
+    font-size: clamp(2.2rem, 9vw, 3.2rem);
+  }
+}
+
+/* Mobile phones */
+
+@media (max-width: 575.98px) {
+  /* General container padding */
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  /* Navbar */
+  .codenest-navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* Brand */
+  .codenest-brand {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Brand text */
+  .codenest-brand-link span {
+    font-size: 1.15rem !important;
+  }
+
+  /* Hero */
+  .codenest-hero {
+    padding: 45px 0 60px;
+  }
+
+  /* Hero label */
+  .hero-left-side .codenest-span {
+    font-size: 0.75rem !important;
+
+    letter-spacing: 2px;
+  }
+
+  /* Hero heading */
+  .codenest-hero-h1-left {
+    font-size: clamp(2.5rem, 13vw, 3.5rem);
+
+    line-height: 1;
+  }
+
+  /* Hero description */
+  .codenest-hero-description {
+    font-size: 1rem !important;
+  }
+
+  /* Hero buttons */
+  .codenest-hero-btn,
+  .codenest-hero-btn-1 {
+    max-width: none;
+
+    width: 100%;
+  }
+
+  /* Hero image */
+  .hero-right-side-img {
+    border-width: 3px;
+
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Technology tags */
+  .codenest-hero-card {
+    gap: 6px;
+
+    padding: 10px;
+  }
+
+  .hero-tech-tag {
+    min-width: auto;
+
+    padding: 7px 9px;
+
+    font-size: 0.7rem;
+  }
+
+  /* Ticker */
+  .ticker-item {
+    font-size: 12px;
+
+    padding: 0 10px;
+  }
+
+  /* Course section */
+  .codenest-courses-section {
+    padding: 60px 0;
+  }
+
+  /* Course heading */
+  .codenest-feature-h1 {
+    font-size: 2.4rem;
+  }
+
+  /* Course card */
+  .codenest-feature-card {
+    padding: 12px !important;
+  }
+
+  /* How It Works */
+  .codenest-how-to-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* How It Works label */
+  .codenest-section-label {
+    letter-spacing: 3px;
+  }
+
+  /* How It Works button */
+  .codenest-how-to-btn {
+    width: 100%;
+  }
+
+  /* CTA */
+  .codenest-cta-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Footer */
+  .codenest-footer {
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+  }
+}
+
+/* small phone */
+
+@media (max-width: 375px) {
+  /* Smaller hero heading */
+  .codenest-hero-h1-left {
+    font-size: 2.35rem;
+  }
+
+  /* Smaller technology tags */
+  .hero-tech-tag {
+    padding: 6px 7px;
+
+    font-size: 0.65rem;
+  }
+
+  /* Smaller course heading */
+  .codenest-feature-h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ============================================================
+   ACCESSIBILITY
+   Respect users who prefer reduced animation.
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* End of Homepage */
+
+/* Courses Page  */
+.course-card {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 18px;
+  padding: 36px;
+  color: white;
+  min-height: 300px;
+
+  transition: all 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  border-color: #263a58;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Top section */
+.course-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.course-category {
+  color: #00d9ff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.course-level {
+  color: black;
+  border: 1px solid #ff705c;
+  background: #ff705c;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Title */
+.course-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+/* Description */
+.course-description {
+  color: #7184a5;
+  font-size: 20px;
+  margin-bottom: 38px;
+}
+
+/* Divider */
+.course-divider {
+  border: 0;
+  border-top: 1px solid #18253a;
+  opacity: 1;
+  margin-bottom: 26px;
+}
+
+/* Bottom */
+.course-info {
+  display: flex;
+  justify-content: space-between;
+
+  color: #496181;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.dot {
+  margin: 0 8px;
+}
+
+.filter-btn {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 375px) {
+  .filter-btn .btn {
+    flex: 1 1 100%;
+  }
+}
+
+.codenest-hero-title h1 {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+}
+
+@media (max-width: 767.98px) {
+  .codenest-hero {
+    min-height: auto;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
+.codenest-hero-title h1 {
+  font-size: clamp(2.2rem, 11vw, 3.5rem);
+}
+
+.hero-right-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.hero-right-container {
+  padding: 1.5rem !important;
+}
+
+.course-title {
+  overflow-wrap: anywhere;
+}
+
+.course-description {
+  overflow-wrap: anywhere;
+}
+
+.course-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.course-info {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Custom Pathfinder Card Styling - Redesigned */
+.pathfinder-card {
+  /* Rich deep charcoal with a subtle gradient hint for depth */
+  background: black;
+  /* Give the border a subtle hint of the neon or a clean slate-700 outline */
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.pathfinder-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    #0ea5e9,
+    #ccff00
+  ); /* Ties in the neon-lime backdrop */
+}
+
+.pathfinder-card:hover {
+  border-color: #38bdf8;
+  box-shadow:
+    0 0 30px rgba(14, 165, 233, 0.25),
+    0 15px 35px -5px rgba(0, 0, 0, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Monospace style label */
+.font-mono-tag {
+  font-family: "Fira Code", monospace;
+  font-size: 0.85rem;
+  letter-spacing: -0.025em;
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+/* Main Heading */
+.pathfinder-title {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+/* Subtitle */
+.pathfinder-subtitle {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Action Button - High contrast, sharp glow */
+.btn-pathfinder {
+  background-color: #38bdf8;
+  color: #030712;
+  font-family: "Fira Code", monospace;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+
+.btn-pathfinder:hover {
+  background-color: #7dd3fc;
+  color: #030712;
+  box-shadow: 0 0 30px rgba(125, 211, 252, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Course Toolbar Layout */
+
+.course-toolbar {
+  margin-bottom: 2.5rem;
+}
+
+/* Search Bar Redesign */
+
+.course-search-wrapper {
+  width: 100%;
+
+  max-width: 440px;
+}
+
+.course-search-group {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  background-color: #ffffff;
+
+  border: 1.5px solid #000000;
+
+  border-radius: 12px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.course-search-group:focus-within {
+  border-color: #000000;
+
+  box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.3);
+}
+
+.course-search-icon {
+  background: transparent;
+
+  border: none;
+
+  color: #64748b;
+
+  padding-left: 1.1rem;
+
+  padding-right: 0.25rem;
+
+  font-size: 1.05rem;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+.course-search-input {
+  border: none !important;
+
+  background: transparent !important;
+
+  padding: 0.75rem 1rem 0.75rem 0.5rem;
+
+  font-size: 0.95rem;
+
+  font-weight: 500;
+
+  color: #0f172a;
+
+  box-shadow: none !important;
+
+  outline: none !important;
+
+  height: 48px;
+}
+
+.course-search-input::placeholder {
+  color: #94a3b8;
+
+  font-weight: 400;
+}
+
+/* Filter Buttons Redesign */
+
+.course-filter-group {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+}
+
+.course-toolbar .filter-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  height: 48px;
+
+  padding: 0 1.25rem;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  border-radius: 12px;
+
+  border: 1.5px solid #000000;
+
+  background-color: #ffffff;
+
+  color: #0f172a;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+.course-toolbar .filter-btn:hover {
+  background-color: #f1f5f9;
+
+  color: #000000;
+
+  border-color: #000000;
+
+  transform: translateY(-2px);
+}
+
+.course-toolbar .filter-btn.active {
+  background-color: #000000 !important;
+
+  color: #ffffff !important;
+
+  border-color: #000000 !important;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+
+  transform: none;
+}
+
+.course-toolbar .filter-btn:focus-visible {
+  outline: none;
+
+  box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.35);
+}
+
+/* Responsive Breakpoints */
+
+@media (max-width: 991.98px) {
+  .course-search-wrapper {
+    max-width: 100%;
+  }
+
+  .course-filter-group {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .course-toolbar .filter-btn {
+    flex: 1 1 calc(50% - 8px);
+
+    padding: 0 0.75rem;
+
+    font-size: 0.85rem;
+
+    height: 44px;
+  }
+
+  .course-search-input {
+    height: 44px;
+  }
+}
+
+/* learning path page */
+.learning-section {
+  padding: 50px 0;
+}
+
+.learning-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background: whitesmoke;
+  border: 1px solid black;
+  border-radius: 24px;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.learning-card:hover {
+  border-color: black;
+  transform: translateY(-4px);
+}
+
+/* Icon */
+.path-icon {
+  width: 66px;
+  height: 66px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  border: 1px solid white;
+  border-radius: 14px;
+}
+
+.path-icon span {
+  font-size: 38px;
+  color: white;
+  line-height: 1;
+}
+
+/* Duration and course count */
+.path-meta {
+  color: #526783;
+  font-family: monospace;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-align: right;
+}
+
+/* Title */
+.path-title {
+  margin: 40px 0;
+  font-size: clamp(24px, 2.2vw, 36px);
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: black;
+}
+
+/* Course items */
+.course-list {
+  margin-bottom: 40px;
+}
+
+.course-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 50px;
+  padding: 12px 18px;
+  background: black;
+  border: 1px solid #171d29;
+  border-radius: 7px;
+  color: #60738f;
+  font-family: monospace;
+  font-size: 15px;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.course-item:hover {
+  background: #0a1524;
+  border-color: black;
+}
+
+.course-number {
+  color: grey;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+/* Footer */
+.path-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.certificate {
+  color: rgb(24, 24, 24);
+  font-family: monospace;
+  font-size: 15px;
+}
+
+.start-path {
+  color: rgb(5, 154, 119);
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.start-path span {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.start-path:hover {
+  color: #80edff;
+}
+
+.start-path:hover span {
+  transform: translateX(5px);
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .learning-section {
+    padding: 35px 0;
+  }
+
+  .learning-card {
+    padding: 26px;
+  }
+
+  .path-title {
+    margin: 30px 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+  .learning-section {
+    padding: 24px 0;
+  }
+
+  .learning-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .path-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .path-icon span {
+    font-size: 30px;
+  }
+
+  .path-meta {
+    font-size: 11px;
+    letter-spacing: 0;
+  }
+
+  .path-title {
+    margin: 28px 0;
+    font-size: 25px;
+    letter-spacing: -0.5px;
+  }
+
+  .course-list {
+    margin-bottom: 28px;
+  }
+
+  .course-item {
+    min-height: 46px;
+    padding: 10px 12px;
+    font-size: 13px;
+    gap: 9px;
+  }
+
+  .course-number {
+    font-size: 14px;
+  }
+
+  .path-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .certificate,
+  .start-path {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   Support Section
+========================= */
+
+.support-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+  overflow: hidden;
+  background-color: #1b1c1f;
+}
+
+.support-container {
+  width: 100%;
+  max-width: 1650px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* =========================
+   Left Content
+========================= */
+
+.support-content {
+  max-width: 960px;
+  padding-left: 0;
+}
+
+.support-label {
+  margin-bottom: 32px;
+  color: #777d78;
+  font-family: "DM Mono", monospace;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.support-title {
+  max-width: 950px;
+  margin-bottom: 22px;
+  color: #f8f8fa;
+  font-size: clamp(40px, 4.5vw, 82px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -4px;
+}
+
+.support-description {
+  max-width: 960px;
+  margin-bottom: 0;
+  color: #9aa9bb;
+  font-size: clamp(16px, 1.3vw, 23px);
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+/* =========================
+   Review Card
+========================= */
+
+.review-card {
+  width: 100%;
+  background-color: #202127;
+  border: 1px solid #34363e;
+  box-shadow: 24px 24px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Card Header */
+
+.review-header {
+  min-height: 73px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px 30px;
+  border-bottom: 1px solid #34363e;
+}
+
+.review-id {
+  color: #7889a2;
+  font-family: "DM Mono", monospace;
+  font-size: 14px;
+}
+
+.review-status {
+  color: #c5ff32;
+  font-family: "DM Mono", monospace;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Code Area */
+
+.review-code {
+  min-height: 293px;
+  display: flex;
+  align-items: center;
+  padding: 35px 50px;
+  background-color: #202127;
+}
+
+.review-code pre {
+  margin: 0;
+  overflow-x: auto;
+}
+
+.review-code code {
+  color: #c4d0e2;
+  font-family: "DM Mono", monospace;
+  font-size: clamp(16px, 1.3vw, 23px);
+  line-height: 1.9;
+  white-space: pre;
+}
+
+.code-selector {
+  color: #c4d0e2;
+}
+
+/* Feedback Area */
+
+.review-feedback {
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #292b33;
+  border-left: 6px solid #c5ff32;
+}
+
+.review-feedback p {
+  margin: 0;
+  color: #9aa9bb;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.review-feedback strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 991.98px) {
+  .support-section {
+    min-height: auto;
+    padding: 80px 0;
+  }
+
+  .support-container {
+    padding: 0 35px;
+  }
+
+  .support-title {
+    max-width: 750px;
+    font-size: clamp(42px, 7vw, 66px);
+    letter-spacing: -2.5px;
+  }
+
+  .support-description {
+    font-size: 18px;
+  }
+
+  .review-code {
+    min-height: 250px;
+    padding: 35px;
+  }
+
+  .review-code code {
+    font-size: 20px;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 575.98px) {
+  .support-section {
+    padding: 65px 0;
+  }
+
+  .support-container {
+    padding: 0 22px;
+  }
+
+  .support-content {
+    padding: 0;
+  }
+
+  .support-label {
+    margin-bottom: 22px;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .support-title {
+    margin-bottom: 20px;
+    font-size: clamp(36px, 10vw, 48px);
+    line-height: 1.12;
+    letter-spacing: -1.8px;
+  }
+
+  .support-description {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .review-card {
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .review-header {
+    min-height: 60px;
+    padding: 16px;
+  }
+
+  .review-id,
+  .review-status {
+    font-size: 11px;
+  }
+
+  .review-code {
+    min-height: 200px;
+    padding: 25px 20px;
+  }
+
+  .review-code code {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .review-feedback {
+    min-height: 75px;
+    padding: 15px;
+    border-left-width: 4px;
+  }
+
+  .review-feedback p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}

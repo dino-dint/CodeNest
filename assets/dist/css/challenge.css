@@ -1,0 +1,480 @@
+/* ============================================================
+   CodeNest - Challenge Page Styles (challenge.css)
+   Scoped styling for challenge.html
+   ============================================================ */
+
+/* Page Background */
+.challenge-page-body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  min-height: 100vh;
+}
+
+/* Challenge Hero Badge & Accents */
+.challenge-hero-tag {
+  color: #00d9ff;
+  font-family: "DM Mono", monospace;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.challenge-stat-badge {
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 12px 20px;
+}
+
+/* Filter Controls Toolbar */
+.challenge-filter-bar {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+
+/* Filter Buttons Segment (Inspired by Reference Image 1) */
+.filter-btn-group {
+  display: inline-flex;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 4px;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.challenge-filter-btn {
+  background: transparent;
+  color: #8b949e;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 6px 18px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.challenge-filter-btn:hover {
+  color: #f0f6fc;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.challenge-filter-btn.active {
+  background: #161b22;
+  color: #00d9ff;
+  border-color: #00d9ff;
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
+}
+
+/* Category Filter Pills */
+.category-pill {
+  background: #21262d;
+  color: #8b949e;
+  border: 1px solid #30363d;
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.category-pill:hover {
+  color: #f0f6fc;
+  border-color: #58a6ff;
+  background: #282e38;
+}
+
+.category-pill.active {
+  background: #00d9ff;
+  color: #0d1117;
+  border-color: #00d9ff;
+  font-weight: 600;
+}
+
+/* Challenge Search Box */
+.challenge-search-input {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  color: #f0f6fc;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.challenge-search-input:focus {
+  background-color: #0d1117;
+  border-color: #00d9ff;
+  color: #f0f6fc;
+  box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.15);
+}
+
+.challenge-search-input::placeholder {
+  color: #6e7681;
+}
+
+/* Challenge Card (Reference Image 1 structure) */
+.challenge-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.challenge-card:hover {
+  transform: translateY(-3px);
+  border-color: #58a6ff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 217, 255, 0.1);
+}
+
+.challenge-card.is-solved {
+  border-color: rgba(35, 134, 54, 0.5);
+  background: linear-gradient(180deg, #161b22 0%, rgba(35, 134, 54, 0.05) 100%);
+}
+
+.challenge-id {
+  font-family: "DM Mono", monospace;
+  font-size: 0.95rem;
+  color: #486581;
+  font-weight: 600;
+  min-width: 42px;
+}
+
+/* Category Badge (Monospace) */
+.badge-category {
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  font-weight: 600;
+}
+
+/* Difficulty Badges */
+.badge-difficulty {
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.badge-difficulty.beginner {
+  background: rgba(35, 134, 54, 0.2);
+  color: #3fb950;
+  border: 1px solid rgba(35, 134, 54, 0.4);
+}
+
+.badge-difficulty.intermediate {
+  background: rgba(0, 217, 255, 0.15);
+  color: #00d9ff;
+  border: 1px solid rgba(0, 217, 255, 0.35);
+}
+
+.badge-difficulty.advanced {
+  background: rgba(217, 119, 6, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(217, 119, 6, 0.45);
+}
+
+/* Challenge Titles and Subtext */
+.challenge-title {
+  color: #f0f6fc;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 8px;
+  margin-bottom: 6px;
+  transition: color 0.2s ease;
+}
+
+.challenge-card:hover .challenge-title {
+  color: #00d9ff;
+}
+
+.challenge-meta {
+  color: #8b949e;
+  font-size: 0.85rem;
+  font-family: "DM Mono", monospace;
+}
+
+.challenge-meta-dot {
+  display: inline-block;
+  margin: 0 6px;
+  color: #484f58;
+}
+
+/* XP Display */
+.challenge-xp {
+  color: #f59e0b;
+  font-family: "DM Mono", monospace;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+/* Solve Button / Link (Inspired by Reference Image 1) */
+.btn-solve-challenge {
+  color: #00d9ff;
+  background: transparent;
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  border-radius: 6px;
+  padding: 7px 18px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-solve-challenge:hover {
+  background: #00d9ff;
+  color: #0d1117;
+  border-color: #00d9ff;
+  box-shadow: 0 0 14px rgba(0, 217, 255, 0.4);
+  transform: translateX(2px);
+}
+
+/* Solved Checkmark Icon */
+.solved-indicator {
+  color: #3fb950;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "DM Mono", monospace;
+}
+
+/* ============================================================
+   SIDEBAR COMPONENTS
+   ============================================================ */
+
+/* Leaderboard Card (Reference Image 1) */
+.sidebar-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-label-green {
+  color: #ccff00;
+  font-family: "DM Mono", monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.sidebar-label-orange {
+  color: #f59e0b;
+  font-family: "DM Mono", monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+/* Leaderboard List */
+.leaderboard-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #21262d;
+  font-size: 0.95rem;
+}
+
+.leaderboard-item:last-child {
+  border-bottom: none;
+}
+
+.leader-rank {
+  font-family: "DM Mono", monospace;
+  width: 24px;
+  color: #8b949e;
+  font-weight: 600;
+}
+
+.leader-rank.top-1 {
+  color: #ffd700;
+}
+
+.leader-rank.top-2 {
+  color: #e2e8f0;
+}
+
+.leader-rank.top-3 {
+  color: #cd7f32;
+}
+
+.leader-name {
+  color: #f0f6fc;
+  font-weight: 500;
+  flex-grow: 1;
+  padding-left: 10px;
+}
+
+.leader-xp {
+  font-family: "DM Mono", monospace;
+  color: #8b949e;
+  font-size: 0.875rem;
+}
+
+/* Daily Challenge Card (Reference Image 1) */
+.daily-challenge-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.daily-challenge-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f59e0b, #ff705c);
+}
+
+.daily-title {
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.daily-countdown {
+  color: #8b949e;
+  font-family: "DM Mono", monospace;
+  font-size: 0.875rem;
+  margin-bottom: 18px;
+}
+
+.daily-countdown span {
+  color: #f0f6fc;
+  font-weight: 600;
+}
+
+.btn-daily-attempt {
+  background-color: #f59e0b;
+  color: #0d1117;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.btn-daily-attempt:hover {
+  background-color: #d97706;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+}
+
+/* Challenge Workspace Modal */
+.modal-content-dark {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  border-radius: 12px;
+}
+
+.modal-header-dark {
+  border-bottom: 1px solid #30363d;
+  padding: 20px 24px;
+}
+
+.modal-footer-dark {
+  border-top: 1px solid #30363d;
+  padding: 16px 24px;
+}
+
+.code-editor-box {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 16px;
+  font-family: "DM Mono", monospace;
+  font-size: 0.9rem;
+  color: #e6edf3;
+  line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  .challenge-card {
+    padding: 16px;
+  }
+
+  .challenge-title {
+    font-size: 1.05rem;
+  }
+
+  .filter-btn-group {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .challenge-filter-btn {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .btn-solve-challenge {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .challenge-filter-bar {
+    padding: 14px;
+  }
+
+  .challenge-id {
+    font-size: 0.85rem;
+  }
+
+  .challenge-xp {
+    font-size: 0.95rem;
+  }
+
+  .sidebar-card,
+  .daily-challenge-card {
+    padding: 18px;
+  }
+}
+
